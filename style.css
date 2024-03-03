@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --color-primary: hsl(205, 78%, 60%);
+    --letter-spacing: .25rem;
+    --text-transform: capitalize;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: hsl(210, 36%, 96%);
+    background-color: hsl(210, 36%, 96%);
+    color: hsl(209, 61%, 16%);
+    font-family: 'Open Sans', sans-serif;
+}
+
+main {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 600px;
+    text-align: center;
+}
+
+main .title {
+    position: relative;
+    margin-bottom: 60px;
+}
+
+main .title h1 {
+    font-size: 2.5rem;
+    letter-spacing: var(--letter-spacing);
+    text-transform: var(--text-transform);
+}
+
+@media (max-width: 576px) {
+    main .title h1 {
+        font-size: 2rem;
+    }
+}
+
+main .title h1::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 43%;
+    background-color: var(--color-primary);
+    width: 85px;
+    height: 4px;
+}
+
+article {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+article .image {
+    position: relative;
+    width: 150px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+article .image::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 7px;
+    background-color: var(--color-primary);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+article img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+article .image i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 50%;
+    font-size: 22px;
+    width: 38px;
+    height: 38px;
+    z-index: 22;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+article h4 {
+    letter-spacing: var(--color-primary-1);
+    margin-bottom: 5px;
+    text-transform: var(--text-transform);
+    letter-spacing: var(--letter-spacing);
+}
+
+article span {
+    color: var(--color-primary);
+    font-size: 14px;
+    text-transform: var(--text-transform);
+}
+
+article p {
+    color: hsl(210, 22%, 49%);
+    line-height: 1.5;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+article .btns button {
+    background-color: transparent;
+    color: hsl(205, 90%, 76%);
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    margin: 0px 10px;
+    transition: .4s ease-in;
+    cursor: pointer;
+}
+
+article .btns button:hover {
+    color: var(--color-primary);
+}
+
+article .btn {
+    background-color: hsl(205, 100%, 96%);
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    border-radius: 8px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    transition: .4s ease-in;
+    cursor: pointer;
+}
+
+article .btn:hover {
+    background-color: var(--color-primary);
+    color: hsl(205, 86%, 17%);
+}
